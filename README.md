@@ -1,9 +1,2 @@
 # Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
-# Nettverksprogrammering
+
