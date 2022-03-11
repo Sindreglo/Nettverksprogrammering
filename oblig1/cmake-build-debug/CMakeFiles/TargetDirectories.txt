@@ -1,0 +1,3 @@
+/Users/sindreglomnes/Documents/Dataing/Nettverksprogrammering/Oving1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sindreglomnes/Documents/Dataing/Nettverksprogrammering/Oving1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sindreglomnes/Documents/Dataing/Nettverksprogrammering/Oving1/cmake-build-debug/CMakeFiles/testClion.dir

@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebSocket chat channel 3000</title>
+    <style>
+      h1{
+        text-align: center;
+      }
+      #container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #message{
+        margin-top: 5px;
+        width: 20%;
+        height: 30px;
+      }
+      #submit{
+        margin-top: 10px;
+        border-radius: 5px;
+        width: 12%;
+        height: 40px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        background: mediumpurple;
+        font-size: 18px;
+      }
+      #chat{
+        width: 40%;
+        outline: none;
+        border: transparent;
+        border-radius: 5px;
+        padding: 10px;
+        resize: none;
+        font-size: 16px;
+        height: 70vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WebSocket chatting</h1>
+    <div id="container">
+      <form>
+        <label for="message">Start a chat:</label>
+        <input id="message" type="text">
+        <button id="submit" type="submit">Send</button>
+      </form>
+      <textarea id="chat" readonly=true></textarea>
+    </div>
+    <script>
+      window.onload = () => {
+        let ws = new WebSocket('ws://localhost:3001');
+        document.getElementById("chat").value = "";
+        document.getElementById("submit").addEventListener("click",(event) => {
+          event.preventDefault();
+          let message = document.getElementById("message").value;
+          ws.send(message);
+        });
+        ws.onmessage = event => {
+          document.getElementById("chat").value += `${event.data}\n`;
+        };
+
+      }
+    </script>
+  </body>
+</html>
